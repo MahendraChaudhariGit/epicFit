@@ -1,0 +1,3250 @@
+<style>
+.posture-d{
+    position: absolute !important;
+}
+.h553{
+    height: 553px !important;
+}
+.image1-posture-pre, .image2-posture-pre, .image3-posture-pre, .image4-posture-pre{
+    margin-bottom: 0px;
+}
+</style>
+<div class="row" style="margin-bottom: 10px;">
+    <div class="col-md-12">
+        @if(Auth::user()->account_type == 'Client')
+        <a class="btn btn-xs btn-default tooltips" href="{{ url('generate/pdf/'.$posture_id) }}" title="Generate PDF"><i class="fa fa-download" style="color:#253746;"></i></a>
+        <a class="btn btn-primary go-back float-right" style="float: right" href="javascript:void(0)">Go Back</a>
+        @else
+        <a class="btn btn-xs btn-default tooltips posture-update" edit-from="preview-page" data-posture-id="{{ $posture_id }}" data-client-id="{{ $client_id }}" data-posture-mode="edit" title="Edit Posture" href="javascript:void(0)"><i class="fa fa-pencil" style="color:#253746;"></i></a>
+        <a class="btn btn-xs btn-default tooltips" href="{{ url('generate/pdf/'.$posture_id) }}" title="Generate PDF"><i class="fa fa-download" style="color:#253746;"></i></a>
+        <a class="btn btn-xs btn-default tooltips mailReport"data-posture-id="{{ $posture_id }}" data-client-id="{{ $client_id }}" title="Send Mail" href="javascript:void(0)"><i class="fa fa-envelope" style="color:#253746;" ></i></a>
+        <a class="btn btn-primary go-back float-right" style="float: right" href="javascript:void(0)">Go Back</a>
+        @endif
+        <label for="hideshowgrid" class="btn btn-primary"> <input type="checkbox" id="hideshowgrid" class="btn-check hidden" autocomplete="off"  />  Show / Hide Grid</label>
+    </div>
+</div>
+@if(empty($image1_data['image_path1']) && empty($image2_data['image_path2']) && empty($image3_data['image_path3']) && empty($image4_data['image_path4']))
+<h4 class="text-center">No Data Available</h4>
+@endif
+<div class="row">
+@if(isset($image1_data['image_path1']))
+<div class="col-md-3 col-sm-6">
+    <div class="h553">
+        <div class="posture-d ">
+        <table class="grid-table"> <tr><td>
+            <table class="tablenumber row7"  >
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="tablenumber row6"  >
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="tablenumber row5"  >
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="tablenumber row4" >
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="tablenumber row3" >
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="tablenumber row2" >
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="tablenumber row1" >
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </td></tr></table></div>
+        <div class="" id="canImg">
+            <div id="imagessize"><img src="{{ asset('uploads/'.$image1_data['image_path1']) }}"
+                    class="img-fluid image1-posture-pre" ></div>
+        </div>
+    </div>
+</div>
+@endif
+@if(isset($image2_data['image_path2']))
+<div class="col-md-3 col-sm-6">
+    <div class="h553">
+        <div class="posture-d " >
+     <table class="grid-table"> <tr><td>
+            <table class="tablenumber row7" >
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="tablenumber row6" >
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="tablenumber row5" >
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="tablenumber row4" >
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="tablenumber row3" >
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="tablenumber row2" >
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="tablenumber row1" >
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </td></tr></table></div>
+        <div class="" id="canImg">
+            <div id="imagessize"><img src="{{ asset('uploads/'.$image2_data['image_path2']) }}"
+                    class="img-fluid image2-posture-pre"></div>
+        </div>
+    </div>
+</div>
+@endif
+@if(isset($image3_data['image_path3']))
+<div class="col-md-3 col-sm-6">
+    <div class="h553">
+        <div class="posture-d">
+             <table class="grid-table"> <tr><td>
+            <table class="tablenumber row7" >
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="tablenumber row6" >
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="tablenumber row5" >
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="tablenumber row4" >
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="tablenumber row3" >
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="tablenumber row2" >
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="tablenumber row1" >
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table></td></tr></table>
+        </div>
+        <div class="" id="canImg">
+            <div id="imagessize" ><img src="{{ asset('uploads/'.$image3_data['image_path3']) }}"
+                    class="img-fluid image3-posture-pre" ></div>
+        </div>
+    </div>
+</div>
+@endif
+@if(isset($image4_data['image_path4']))
+<div class="col-md-3 col-sm-6">
+    <div class="h553">
+        <div class="posture-d " >
+          <table class="grid-table"> <tr><td>
+            <table class="tablenumber row7">
+                <tbody> 
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>                 
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="tablenumber row6">
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="tablenumber row5">
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="tablenumber row4">
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="tablenumber row3">
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="tablenumber row2">
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="tablenumber row1">
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </td></tr></table></div>
+        <div class="" id="canImg">
+            <div id="imagessize"><img src="{{ asset('uploads/'.$image4_data['image_path4']) }}"
+                    class="img-fluid image4-posture-pre"  ></div>
+        </div>
+    </div>
+</div>
+@endif
+<div class="col-md-12">
+    <hr />
+</div>
+
+@if(isset($image1_data['image_path1']) && $image1_data['angle1'] != null)
+<div class="col-md-12 col-xs-12" style="margin-top:30px">
+    <div class="" style="background-color: #6c757d!important;">
+        <h4 class="text-center text-white" style="padding: 5px;">Front View Deviations</h4>
+    </div>
+    @php
+        if(explode(',',$image1_data['front_inches'])[0] >= 0){
+            // $inches_shifted1 = number_format((float)explode(',',$image1_data['front_inches'])[0], 2, '.', '');
+            $inches_shifted1 = 0;
+            $inches_position1 = 'right';
+        }else{
+            $inches_shifted1 = explode(',',$image1_data['front_inches'])[0] != 'NaN' ? number_format((float)explode(',',$image1_data['front_inches'])[0], 2, '.', '') == '0.00' ? number_format((float)explode(',',$image1_data['front_inches'])[0], 2, '.', '') : number_format((float)explode(',',$image1_data['front_inches'])[0], 2, '.', '') * -1 : 0;
+            $inches_position1 = 'left';
+        }
+        if(explode(',',$image1_data['front_inches'])[1] >= 0){
+            $inches_shifted2 = explode(',',$image1_data['front_inches'])[1] != 'NaN' ? number_format((float)explode(',',$image1_data['front_inches'])[1], 2, '.', '') : 0;
+            $inches_position2 = 'right';
+        }else{
+            $inches_shifted2 = explode(',',$image1_data['front_inches'])[1] != 'NaN' ? number_format((float)explode(',',$image1_data['front_inches'])[1], 2, '.', '') == '0.00' ? number_format((float)explode(',',$image1_data['front_inches'])[1], 2, '.', '') : number_format((float)explode(',',$image1_data['front_inches'])[1], 2, '.', '') * -1 : 0;
+            $inches_position2 = 'left';
+        }
+        if(explode(',',$image1_data['front_inches'])[2] >= 0){
+            $inches_shifted3 = explode(',',$image1_data['front_inches'])[2] != 'NaN' ? number_format((float)explode(',',$image1_data['front_inches'])[2], 2, '.', '') : 0;
+            $inches_position3 = 'right';
+        }else{
+            $inches_shifted3 = explode(',',$image1_data['front_inches'])[2] != 'NaN' ? number_format((float)explode(',',$image1_data['front_inches'])[2], 2, '.', '') == '0.00' ? number_format((float)explode(',',$image1_data['front_inches'])[2], 2, '.', '') : number_format((float)explode(',',$image1_data['front_inches'])[2], 2, '.', '') * -1 : 0;
+            $inches_position3 = 'left';
+        }
+        if(explode(',',$image1_data['front_inches'])[3] >= 0){
+            $inches_shifted4 = explode(',',$image1_data['front_inches'])[3] != 'NaN' ? number_format((float)explode(',',$image1_data['front_inches'])[3], 2, '.', '') : 0;;
+            $inches_position4 = 'right';
+        }else{
+            $inches_shifted4 = explode(',',$image1_data['front_inches'])[3] != 'NaN' ? number_format((float)explode(',',$image1_data['front_inches'])[3], 2, '.', '') == '0.00' ? number_format((float)explode(',',$image1_data['front_inches'])[3], 2, '.', '') : number_format((float)explode(',',$image1_data['front_inches'])[3], 2, '.', '') * -1 : 0;
+            $inches_position4 = 'left';
+        }
+      
+
+        if(explode(',',$image1_data['angle1'])[0] >= 0){
+            $angle_shifted1 = number_format((float)explode(',',$image1_data['angle1'])[0], 2, '.', '');
+            $shifted1 = 'right';
+        }else{
+            $angle_shifted1 = number_format((float)explode(',',$image1_data['angle1'])[0], 2, '.', '') * -1;
+            $shifted1 = 'left';
+        }
+        if(explode(',',$image1_data['angle1'])[2] >= 0){
+            $angle_shifted2 = number_format((float)explode(',',$image1_data['angle1'])[2], 2, '.', '');
+            $shifted2 = 'right';
+        }else{
+            $angle_shifted2 = number_format((float)explode(',',$image1_data['angle1'])[2], 2, '.', '') * -1;
+            $shifted2 = 'left';
+        }
+        if(explode(',',$image1_data['angle1'])[3] >= 0){
+            $angle_shifted3 = number_format((float)explode(',',$image1_data['angle1'])[3], 2, '.', '');
+            $shifted3 = 'right';
+        }else{
+            $angle_shifted3 = number_format((float)explode(',',$image1_data['angle1'])[3], 2, '.', '') * -1;
+            $shifted3 = 'left';
+        }
+        if(explode(',',$image1_data['angle1'])[5] >= 0){
+            $angle_shifted4 = number_format((float)explode(',',$image1_data['angle1'])[5], 2, '.', '');
+            $shifted4 = 'right';
+        }else{
+            $angle_shifted4 = number_format((float)explode(',',$image1_data['angle1'])[5], 2, '.', '') * -1;
+            $shifted4 = 'left';
+        }
+        if($unit == 'Imperial'){
+            $inches_shifted1 = $inches_shifted1;
+            $inches_shifted2 = $inches_shifted2;
+            $inches_shifted3 = $inches_shifted3;
+            $inches_shifted4 = $inches_shifted4;
+            $unit_in = '"';
+        }else{
+            $inches_shifted1 = number_format((float)$inches_shifted1 * 2.54, 2, '.', '');
+            $inches_shifted2 = number_format((float)$inches_shifted2 * 2.54, 2, '.', '');
+            $inches_shifted3 = number_format((float)$inches_shifted3 * 2.54, 2, '.', '');
+            $inches_shifted4 = number_format((float)$inches_shifted4 * 2.54, 2, '.', '');
+            $unit_in = 'cm';
+        }
+    @endphp
+    <p>Head is shifted {{ $inches_shifted1 }}{{ $unit_in }} {{ $inches_position1 }} .Head is tilted {{ $angle_shifted1 }}° {{ $shifted1 }}</p>
+    <p>Shoulders is shifted {{ $inches_shifted2 }}{{ $unit_in }} {{ $inches_position2 }} .Shoulders is tilted {{ $angle_shifted2 }}° {{ $shifted2 }}</p>
+    <p>Ribcage shifted {{ $inches_shifted3 }}{{ $unit_in }} {{ $inches_position3 }} .Ribcage is tilted {{ $angle_shifted3 }}° {{ $shifted3 }}</p>
+    <p>Hips shifted {{ $inches_shifted4 }}{{ $unit_in }} {{ $inches_position4 }} .Hips is tilted {{ $angle_shifted4 }}° {{ $shifted4 }}</p>
+</div>
+
+@endif
+@if(isset($image3_data['image_path3']) && $image3_data['angle3'] != null)
+<div class="col-md-12 col-xs-12" style="margin-top:30px">
+    <div class="" style="background-color: #6c757d!important;">
+        <h4 class="text-center text-white" style="padding: 5px;">Back View Deviations</h4>
+    </div>
+    @php
+        if(explode(',',$image3_data['back_inches'])[0] >= 0){
+            // $inches_shifted1 = number_format((float)explode(',',$image3_data['back_inches'])[0], 2, '.', '');
+            $inches_shifted1 = 0;
+            $inches_position1 = 'right';
+        }else{
+            $inches_shifted1 = explode(',',$image3_data['back_inches'])[0] != 'NaN' ? number_format((float)explode(',',$image3_data['back_inches'])[0], 2, '.', '') == '0.00' ? number_format((float)explode(',',$image3_data['back_inches'])[0], 2, '.', '') : number_format((float)explode(',',$image3_data['back_inches'])[0], 2, '.', '') * -1 : 0;
+            $inches_position1 = 'left';
+        }
+        if(explode(',',$image3_data['back_inches'])[1] >= 0){
+            $inches_shifted2 = explode(',',$image3_data['back_inches'])[1] != 'NaN' ? number_format((float)explode(',',$image3_data['back_inches'])[1], 2, '.', '') : 0;
+            $inches_position2 = 'right';
+        }else{
+            $inches_shifted2 = explode(',',$image3_data['back_inches'])[1] != 'NaN' ? number_format((float)explode(',',$image3_data['back_inches'])[1], 2, '.', '') == '0.00' ? number_format((float)explode(',',$image3_data['back_inches'])[1], 2, '.', '') : number_format((float)explode(',',$image3_data['back_inches'])[1], 2, '.', '') * -1 : 0;
+            $inches_position2 = 'left';
+        }
+        if(explode(',',$image3_data['back_inches'])[2] >= 0){
+            $inches_shifted3 = explode(',',$image3_data['back_inches'])[2] != 'NaN' ? number_format((float)explode(',',$image3_data['back_inches'])[2], 2, '.', '') : 0;
+            $inches_position3 = 'right';
+        }else{
+            $inches_shifted3 = explode(',',$image3_data['back_inches'])[2] != 'NaN' ? number_format((float)explode(',',$image3_data['back_inches'])[2], 2, '.', '') == '0.00' ? number_format((float)explode(',',$image3_data['back_inches'])[2], 2, '.', '') : number_format((float)explode(',',$image3_data['back_inches'])[2], 2, '.', '') * -1 : 0;
+            $inches_position3 = 'left';
+        }
+        if(explode(',',$image3_data['back_inches'])[3] >= 0){
+            $inches_shifted4 = explode(',',$image3_data['back_inches'])[3] != 'NaN' ? number_format((float)explode(',',$image3_data['back_inches'])[3], 2, '.', '') : 0;
+            $inches_position4 = 'right';
+        }else{
+            $inches_shifted4 = explode(',',$image3_data['back_inches'])[3] != 'NaN' ? number_format((float)explode(',',$image3_data['back_inches'])[3], 2, '.', '') == '0.00' ? number_format((float)explode(',',$image3_data['back_inches'])[3], 2, '.', '') : number_format((float)explode(',',$image3_data['back_inches'])[3], 2, '.', '') * -1 : 0;
+            $inches_position4 = 'left';
+        }
+
+        if(explode(',',$image3_data['angle3'])[0] >= 0){
+            $angle_shifted1 = number_format((float)(180 - explode(',',$image3_data['angle3'])[0]), 2, '.', '');
+            $shifted1 = 'right';
+        }else{
+            $angle_shifted1 = number_format((float)(180 - explode(',',$image3_data['angle3'])[0] * -1), 2, '.', '');
+            $shifted1 = 'left';
+        }
+        if(explode(',',$image3_data['angle3'])[3] >= 0){
+            $angle_shifted2 = number_format((float)(180 -explode(',',$image3_data['angle3'])[3]), 2, '.', '');
+            $shifted2 = 'right';
+        }else{
+            $angle_shifted2 = number_format((float)(180 -explode(',',$image3_data['angle3'])[3] * -1), 2, '.', '');
+            $shifted2 = 'left';
+        }
+        if(explode(',',$image3_data['angle3'])[4] >= 0){
+            $angle_shifted3 = number_format((float)(180 - explode(',',$image3_data['angle3'])[4]), 2, '.', '');
+            $shifted3 = 'right';
+        }else{
+            $angle_shifted3 = number_format((float)(180 - explode(',',$image3_data['angle3'])[4] * -1), 2, '.', '');
+            $shifted3 = 'left';
+        }
+        if(explode(',',$image3_data['angle3'])[5] >= 0){
+            $angle_shifted4 = number_format((float)(180 - explode(',',$image3_data['angle3'])[5]), 2, '.', '');
+            $shifted4 = 'right';
+        }else{
+            $angle_shifted4 = number_format((float)(180 - explode(',',$image3_data['angle3'])[5] * -1), 2, '.', '');
+            $shifted4 = 'left';
+        }
+        if($unit == 'Imperial'){
+            $inches_shifted1 = $inches_shifted1;
+            $inches_shifted2 = $inches_shifted2;
+            $inches_shifted3 = $inches_shifted3;
+            $inches_shifted4 = $inches_shifted4;
+            $unit_in = '"';
+        }else{
+            $inches_shifted1 = number_format((float)$inches_shifted1 * 2.54, 2, '.', '');
+            $inches_shifted2 = number_format((float)$inches_shifted2 * 2.54, 2, '.', '');
+            $inches_shifted3 = number_format((float)$inches_shifted3 * 2.54, 2, '.', '');
+            $inches_shifted4 = number_format((float)$inches_shifted4 * 2.54, 2, '.', '');
+            $unit_in = 'cm';
+        }
+    @endphp
+     <p>Head is shifted {{ $inches_shifted1 }}{{ $unit_in }} {{ $inches_position1 }} .Head is tilted {{ $angle_shifted1 }}° {{ $shifted1 }}</p>
+     <p>Shoulders is shifted {{ $inches_shifted2 }}{{ $unit_in }} {{ $inches_position2 }} .Shoulders is tilted {{ $angle_shifted2 }}° {{ $shifted2 }}</p>
+     <p>Ribcage shifted {{ $inches_shifted3 }}{{ $unit_in }} {{ $inches_position3 }} .Ribcage is tilted {{ $angle_shifted3 }}° {{ $shifted3 }}</p>
+     <p>Hips shifted {{ $inches_shifted4 }}{{ $unit_in }} {{ $inches_position4 }} .Hips is tilted {{ $angle_shifted4 }}° {{ $shifted4 }}</p>
+</div>
+@endif
+@if(isset($image4_data['image_path4']) && $image4_data['angle4'] != null)
+<div class="col-md-12 col-xs-12" style="margin-top:30px">
+    <div class="" style="background-color: #6c757d!important;">
+        <h4 class="text-center text-white" style="padding: 5px;">Left View Deviations</h4>
+    </div>
+    @php
+        if(explode(',',$image4_data['left_inches'])[0] >= 0){
+            $inches_shifted1 = number_format((float)explode(',',$image4_data['left_inches'])[0], 2, '.', '');
+            $inches_position1 = 'backward';
+        }else{
+            $inches_shifted1 = number_format((float)explode(',',$image4_data['left_inches'])[0], 2, '.', '') * -1;
+            $inches_position1 = 'forward';
+        }
+        if(explode(',',$image4_data['left_inches'])[1] >= 0){
+            $inches_shifted2 = number_format((float)explode(',',$image4_data['left_inches'])[1], 2, '.', '');
+            $inches_position2 = 'backward';
+        }else{
+            $inches_shifted2 = number_format((float)explode(',',$image4_data['left_inches'])[1], 2, '.', '') * -1;
+            $inches_position2 = 'forward';
+        }
+        if(explode(',',$image4_data['left_inches'])[2] >= 0){
+            $inches_shifted3 = number_format((float)explode(',',$image4_data['left_inches'])[2], 2, '.', '');
+            $inches_position3 = 'backward';
+        }else{
+            $inches_shifted3 = number_format((float)explode(',',$image4_data['left_inches'])[2], 2, '.', '') * -1;
+            $inches_position3 = 'forward';
+        }
+        if(explode(',',$image4_data['left_inches'])[3] >= 0){
+            $inches_shifted4 = number_format((float)explode(',',$image4_data['left_inches'])[3], 2, '.', '');
+            $inches_position4 = 'backward';
+        }else{
+            $inches_shifted4 = number_format((float)explode(',',$image4_data['left_inches'])[3], 2, '.', '') * -1;
+            $inches_position4 = 'forward';
+        }
+        if(explode(',',$image4_data['left_inches'])[4]){
+            $head_weight1 = number_format((float)explode(',',$image4_data['left_inches'])[4], 2, '.', '');
+        }else{
+            $head_weight1 = 0;
+        }
+        if(explode(',',$image4_data['left_inches'])[5]){
+            $head_weight2 = number_format((float)explode(',',$image4_data['left_inches'])[5], 2, '.', '');
+        }else{
+            $head_weight2 = 0;
+        }
+        if($unit == 'Imperial'){
+            $head_weight1 = $head_weight1;
+            $head_weight2 = $head_weight2;
+            $unit_in = 'lb';
+
+            $inches_shifted1 = $inches_shifted1;
+            $inches_shifted2 = $inches_shifted2;
+            $inches_shifted3 = $inches_shifted3;
+            $inches_shifted4 = $inches_shifted4;
+            $set_unit = '"';
+        }else{
+            $head_weight1 = number_format((float)explode(',',$image4_data['left_inches'])[4]*0.453592, 2, '.', '');
+            $head_weight2 = number_format((float)explode(',',$image4_data['left_inches'])[5]*0.453592, 2, '.', '');
+            $unit_in = 'kg';
+
+            $inches_shifted1 = number_format((float)$inches_shifted1 * 2.54, 2, '.', '');
+            $inches_shifted2 = number_format((float)$inches_shifted2 * 2.54, 2, '.', '');
+            $inches_shifted3 = number_format((float)$inches_shifted3 * 2.54, 2, '.', '');
+            $inches_shifted4 = number_format((float)$inches_shifted4 * 2.54, 2, '.', '');
+            $set_unit = 'cm';
+        }
+    @endphp
+    <p>Your head weighs approximately {{ abs($head_weight1) }} {{ $unit_in }}. it is shifted {{ $inches_shifted1 }}{{ $set_unit }} {{ $inches_position1 }}.</p>
+    <p>Based on physics, your head now effectively weighs {{ abs($head_weight2) }} {{ $unit_in }} instead of {{ abs($head_weight1) }} {{ $unit_in }}.</p>
+    <p>Shoulders are shifted {{ $inches_shifted2 }}{{ $set_unit }} {{ $inches_position2 }}.</p>
+    <p>Hips are shifted {{ $inches_shifted3 }}{{ $set_unit }} {{ $inches_position3 }}.</p>
+    <p>Knees are shifted {{ $inches_shifted4 }}{{ $set_unit }} {{ $inches_position4 }}.</p>
+</div>
+@endif
+@if(isset($image2_data['image_path2']) && $image2_data['angle2'] != null)
+<div class="col-md-12 col-xs-12" style="margin-top:30px">
+    <div class="" style="background-color: #6c757d!important;">
+        <h4 class="text-center text-white" style="padding: 5px;">Right View Deviations</h4>
+    </div>
+    @php
+    if(explode(',',$image2_data['right_inches'])[0] >= 0){
+        $inches_shifted1 = number_format((float)explode(',',$image2_data['right_inches'])[0], 2, '.', '');
+        $inches_position1 = 'backward';
+    }else{
+        $inches_shifted1 = number_format((float)explode(',',$image2_data['right_inches'])[0], 2, '.', '') * -1;
+        $inches_position1 = 'forward';
+    }
+    if(explode(',',$image2_data['right_inches'])[1] >= 0){
+        $inches_shifted2 = number_format((float)explode(',',$image2_data['right_inches'])[1], 2, '.', '');
+        $inches_position2 = 'backward';
+    }else{
+        $inches_shifted2 = number_format((float)explode(',',$image2_data['right_inches'])[1], 2, '.', '') * -1;
+        $inches_position2 = 'forward';
+    }
+    if(explode(',',$image2_data['right_inches'])[2] >= 0){
+        $inches_shifted3 = number_format((float)explode(',',$image2_data['right_inches'])[2], 2, '.', '');
+        $inches_position3 = 'backward';
+    }else{
+        $inches_shifted3 = number_format((float)explode(',',$image2_data['right_inches'])[2], 2, '.', '') * -1;
+        $inches_position3 = 'forward';
+    }
+    if(explode(',',$image2_data['right_inches'])[3] >= 0){
+        $inches_shifted4 = number_format((float)explode(',',$image2_data['right_inches'])[3], 2, '.', '');
+        $inches_position4 = 'backward';
+    }else{
+        $inches_shifted4 = number_format((float)explode(',',$image2_data['right_inches'])[3], 2, '.', '') * -1;
+        $inches_position4 = 'forward';
+    }
+    if(explode(',',$image2_data['right_inches'])[4]){
+        $head_weight1 = number_format((float)explode(',',$image2_data['right_inches'])[4], 2, '.', '');
+    }else{
+        $head_weight1 = 0;
+    }
+    if(explode(',',$image2_data['right_inches'])[5]){
+        $head_weight2 = number_format((float)explode(',',$image2_data['right_inches'])[5], 2, '.', '');
+    }else{
+        $head_weight2 = 0;
+    }
+    if($unit == 'Imperial'){
+        $head_weight1 = $head_weight1;
+        $head_weight2 = $head_weight2;
+        $unit_in = 'lb';
+
+        $inches_shifted1 = $inches_shifted1;
+        $inches_shifted2 = $inches_shifted2;
+        $inches_shifted3 = $inches_shifted3;
+        $inches_shifted4 = $inches_shifted4;
+        $set_unit = '"';
+    }else{
+        $head_weight1 = number_format((float)explode(',',$image2_data['right_inches'])[4]*0.453592, 2, '.', '');
+        $head_weight2 = number_format((float)explode(',',$image2_data['right_inches'])[5]*0.453592, 2, '.', '');
+        $unit_in = 'kg';
+
+        $inches_shifted1 = number_format((float)$inches_shifted1 * 2.54, 2, '.', '');
+        $inches_shifted2 = number_format((float)$inches_shifted2 * 2.54, 2, '.', '');
+        $inches_shifted3 = number_format((float)$inches_shifted3 * 2.54, 2, '.', '');
+        $inches_shifted4 = number_format((float)$inches_shifted4 * 2.54, 2, '.', '');
+        $set_unit = 'cm';
+    }
+@endphp
+    <p>Your head weighs approximately {{ abs($head_weight1) }} {{ $unit_in  }}. it is shifted {{ $inches_shifted1 }}{{ $set_unit }} {{ $inches_position1 }}.</p>
+    <p>Based on physics, your head now effectively weighs {{ abs($head_weight2) }} {{ $unit_in  }} instead of {{ abs($head_weight1) }} {{ $unit_in  }}.</p>
+    <p>Shoulders are shifted {{ $inches_shifted2 }}{{ $set_unit }} {{ $inches_position2 }}.</p>
+    <p>Hips are shifted {{ $inches_shifted3 }}{{ $set_unit }} {{ $inches_position3 }}.</p>
+    <p>Knees are shifted {{ $inches_shifted4 }}{{ $set_unit }} {{ $inches_position4 }}.</p>
+</div>
+@endif
+</div>

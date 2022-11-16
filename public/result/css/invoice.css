@@ -1,0 +1,31 @@
+        select {
+            -moz-appearance:menulist !important;
+            -webkit-appearance: menulist! important;
+        }
+
+		textarea.form-control {
+			resize: none!important;
+			overflow-y: auto !important;
+			height: 36px !important;
+			/*width:135px; !important;		*/
+		}
+		.modal-body {
+		 max-height: 500px;
+		 overflow-y: auto;
+		}
+		hr {
+			display: block;
+			height: 1px;
+			border: 0;
+			border-top: 1px solid #ccc;
+			margin: 1em 0;
+			padding: 0; 
+			color:#000;
+		}
+.popover{width:200px !important;z-index:999999 !important;}
+
+#discount-submit,#amount {display: none;}
+.wd-400{width:400px !important;}
+.bold{
+	font-weight:bold;
+}

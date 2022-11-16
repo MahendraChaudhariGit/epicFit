@@ -1,0 +1,890 @@
+div#fitMap.fitMap {
+    width: 100%;
+    height: 750px;
+    margin: auto;
+    margin-top: 0px;
+    float: left;
+    border: 0px solid rgba(0, 0, 0, .3);
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+}
+#fitControlPanelMapInner{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    padding: 0px;
+    width: 100%;
+}
+/* .buttonPanel { */
+    /* float: right; */
+    /* position: absolute; */
+    /* z-index: 1; */
+    /* margin: 5px 0 0 483px; */
+/* } */
+/* ankit */
+.buttonPanel {
+float:right;
+}
+.last{margin-right:0px;}
+#both{
+    margin-right: 6px;
+    margin-left: 6px;
+}
+/* ankit */
+.buttonItem {
+    cursor: pointer;
+    float: left;
+    margin-right: 0px;
+}
+
+    .buttonItem img {
+	border: 1px solid #f64c1e;
+    padding: 1px 1px;
+    background: #f64c1e;
+    }
+
+img {
+    max-width: none !important;
+}
+
+.fitMapMain {
+    height: 100%;
+    position: relative;
+}
+
+
+.fitMapInner {
+    height: 100%;
+}
+
+.contentWrapper {
+    height: 100%;
+}
+
+#fitControlPanel {
+    height: auto;
+    border: none;
+    background: none;
+}
+
+#fitMapContentColumn.contentColumn {
+    height: 100%;
+    margin-left: 0px;
+}
+
+#fitControlPanel.controlPanel {
+    position: absolute;
+    margin: 10px 10px 10px 80px;
+}
+
+.fitCanvas {
+    width: 100%;
+    height: 100%;
+    margin-bottom: -90px;
+    float: left;
+}
+
+.accordian {
+    background: none repeat scroll 0 0 white;
+}
+
+.controlPanel .fitControlPanelMapInner {
+    padding-top: 0px;
+    background: none repeat scroll 0 0 white;
+    border: 3px solid rgba(0, 0, 0, .3);
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+}
+
+.satelliteControlPanel {
+    border: 10px solid rgba(0, 0, 0, .6);
+}
+
+
+.accHeader {
+    background: none repeat scroll 0 0 blue;
+    color: #FFFFFF;
+    cursor: pointer;
+    margin: 5px 0px;
+    padding-left: 5px;
+}
+
+    .accHeader.titleBar {
+        background: none repeat scroll 0 0 lightBlue;
+    }
+/*ankit*/
+.mapCommand {
+    margin: 0px 0px 0px 0px;
+    float: left;
+    width:auto;
+    background: white;
+    clear: both;
+}
+/*ankit*/
+.searchBar {
+    border-bottom: 1px solid #C2CFE4;
+}
+
+.chart {
+    width: 820px !important;
+    height: 200px;
+    margin: auto;
+    border: 1px solid gray;
+}
+
+.clear {
+    clear: both;
+}
+
+.chartContainer {
+    width: 825px;
+}
+
+.chartControl {
+    float: right;
+}
+
+.toggleImage {
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+}
+/*ankit*/
+.staticPanel {
+    padding: 15px;
+    position: absolute;
+    width: 86%;
+    /* border: 3px solid rgba(246, 76, 30, 0.39); */
+    background-color: #FFFFFF;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    bottom: 30px;
+    left: 7%;
+    right: 7%;
+    margin: auto;
+}
+#conte{
+	width:50%;float:left;
+}
+#m{
+    float: left;
+    width: auto;
+}
+#k{
+    float: right;
+    width: auto;
+}
+/*ankit*/
+.borderBottom {
+    border-bottom: 1px solid #E4E4E4;
+}
+
+    /* .borderBottom .leftDiv span { */
+        /* float: left; */
+        /* color: #000000 !important; */
+        /* margin-left: 5px; */
+    /* } */
+
+    /* .borderBottom .rightDiv span { */
+        /* float: right; */
+        /* color: #000000 !important; */
+        /* margin-right: 10px; */
+    /* } */
+
+.unpaddedDiv {
+    padding: 0px !important;
+}
+
+.borderTop {
+    padding-top: 11px !important;
+}
+
+    .borderTop img {
+        float: right;
+    }
+
+.staticPanel .textDiv div {
+    margin: 5px 0px 5px 0px;
+}
+
+.staticPanel div {
+    padding: 5px 0px;
+}
+
+.tagDiv {
+    text-align: center;
+}
+
+.staticHeader {
+    color: #f64c1e;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.closeImage {
+    height: 20px;
+    width: 20px;
+    margin: -15px;
+    float: right;
+    cursor: pointer;
+}
+
+.saveInfo {
+    /* padding: 10px 30px; */
+}
+
+.fitInput {
+    width: 440px !important;
+    margin-bottom: 10px !important;
+}
+
+.fitInputDesc {
+    margin-bottom: 10px !important;
+    width: 440px !important;
+    height: 40px !important;
+}
+
+#fitSaveDialog #fitMappedActivity hr {
+    width: auto;
+}
+
+.workoutContainer .workoutPlanner select {
+    width: 190px;
+    margin-bottom: 10px;
+}
+
+.workoutContainer .workoutPlanner input[type="text"] {
+    /* width: 177px; */
+	width: 190px;
+    margin-bottom: 10px;
+}
+
+.workoutContainer .popupBox {
+    z-index: auto;
+}
+.ui_tpicker_time_input{width:100%;}
+.selectedWorkout {
+    padding: 7px;
+    width: auto;
+    min-width: 205px;
+    background: #fff;
+    float: left;
+    position: absolute;
+}
+.selectedWorkout span {
+    width: 62px;
+    display: inline-block;
+}
+.selectedWorkout select {
+    width: calc(100% - 77px);
+    margin: 5px;
+    display: inline-block;
+}
+
+    .selectedWorkout input {
+        width: 115px;
+        margin: 5px;
+    }
+
+.fit-ui .ui-dialog.ui-widget-content.customPopup {
+    border: 10px solid rgb(84, 84, 84);
+    border: 10px solid rgba(84, 84, 84, .3);
+    -webkit-background-clip: padding-box !important; /* for Safari */
+    background-clip: padding-box !important; /* for IE9+, Firefox 4+, Opera, Chrome */
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+}
+/*ankit*/
+/* .fitMap .fitMapBtn { */
+    /* margin-top: 0px; */
+    /* padding-top: 9px; */
+    /* padding-bottom: 9px; */
+/* } */
+/*ankit*/
+#fitControlPanel.controlPanel {
+    width: 217px;
+}
+
+/* .displayPanel { */
+    /* padding: 10px; */
+    /* margin: 0px !important; */
+/* } */
+
+.distanceDiv {
+    float: left;
+    height: auto;
+    width: 100%;
+    border-bottom: 1px solid #f64c1e;
+    padding: 8px 13px;
+    margin-bottom: 3px;
+}
+.timeDiv {
+    float: left;
+    height: auto;
+    width: 100%;
+    border-bottom: 1px solid #f64c1e;
+    clear: both;
+    padding: 2px 24px;
+}
+
+.elevationDiv {
+    float: left;
+    height: auto;
+    width: 100%;
+    padding: 8px 21px;
+    border-bottom: 1px solid #f64c1e;
+    margin-bottom: 3px;
+    clear: both;
+}
+
+.caloriesDiv {
+    float: left;
+    height: auto;
+    width: 100%;
+    border-bottom: 1px solid #f64c1e;
+    padding: 4px 2px;
+    clear: both;
+}
+
+    .distanceDiv div, .elevationDiv div, .caloriesDiv div, .timeDiv div {
+        text-align: center;
+    }
+
+#fitMapDistance {
+    padding: 0px;
+}
+.headerGradient {
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    background-image: -ms-linear-gradient(to bottom, #de3b0f 0%, #f64c1e 34%, #f64c1e 34%, #f64c1e 100%);
+    background-image: -moz-linear-gradient(to bottom, #de3b0f 0%, #f64c1e 34%, #f64c1e 34%, #f64c1e 100%);
+    background-image: -o-linear-gradient(to bottom, #de3b0f 0%, #f64c1e 34%, #f64c1e 34%, #f64c1e 100%);
+    background-image: -webkit-linear-gradient(to bottom, #de3b0f 0%, #f64c1e 34%, #f64c1e 34%, #f64c1e 100%);
+    background-image: linear-gradient(to bottom, #de3b0f 0%, #f64c1e 34%, #f64c1e 34%, #f64c1e 100%);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 7px;
+    padding-right: 5px;
+    width: 90px;
+}
+.workoutGradient {
+    float: right;
+    right: 0px;
+    top: 60px;
+    position: absolute;
+    background-image: -ms-linear-gradient(to bottom, #de3b0f 0%, #f64c1e 34%, #f64c1e 34%, #f64c1e 100%);
+    background-image: -moz-linear-gradient(to bottom, #de3b0f 0%, #f64c1e 34%, #f64c1e 34%, #f64c1e 100%);
+    background-image: -o-linear-gradient(to bottom, #de3b0f 0%, #f64c1e 34%, #f64c1e 34%, #f64c1e 100%);
+    background-image: -webkit-linear-gradient(to bottom, #de3b0f 0%, #f64c1e 34%, #f64c1e 34%, #f64c1e 100%);
+    background-image: linear-gradient(to bottom, #de3b0f 0%, #f64c1e 34%, #f64c1e 34%, #f64c1e 100%);
+}
+
+/* .searchTextSpace { */
+    /* margin-bottom: 3px !important; */
+/* } */
+
+.caloriesText {
+    padding-top: 6px;
+    font-size: 12px !important;
+    font-weight: bold !important;
+    color: #F0F0F0 !important;
+}
+
+.displayText {
+    font-size: 12px !important;
+    font-weight: bold !important;
+    color: #F0F0F0 !important;
+}
+
+.upperDisplayText {
+    padding-top: 3px;
+    font-size: 12px !important;
+    font-weight: bold !important;
+    color: #F0F0F0 !important;
+}
+
+input[type="text"] {
+    -webkit-border-radius: 0px;
+    !important;
+    border-radius: 0px;
+    !important;
+}
+
+.minimizeDiv {
+    display: none;
+    cursor: pointer;
+    border-top-color: rgba(84, 84, 84, 0.4);
+    border-top-style: solid;
+    border-top-width: 15px;
+}
+
+.fit-ui td.fitLabel {
+    border: medium none;
+    text-align: right;
+    vertical-align: middle;
+}
+
+.fit-ui #fitRoute td {
+    padding: 0px;
+}
+
+/*
+.minimizeDiv {
+height:20px;
+width:200px
+    background-image: -moz-linear-gradient(45deg, #666 25%, transparent 25%), 
+        -moz-linear-gradient(-45deg, #666 25%, transparent 25%), 
+        -moz-linear-gradient(45deg, transparent 75%, #666 75%), 
+        -moz-linear-gradient(-45deg, transparent 75%, #666 75%);
+    background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.25, #666), color-stop(.25, transparent)), 
+        -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.25, #666), color-stop(.25, transparent)), 
+        -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.75, transparent), color-stop(.75, #666)), 
+        -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.75, transparent), color-stop(.75, #666));
+    background-image: -webkit-linear-gradient(45deg, #666 25%, transparent 25%), 
+        -webkit-linear-gradient(-45deg, #666 25%, transparent 25%), 
+        -webkit-linear-gradient(45deg, transparent 75%, #666 75%), 
+        -webkit-linear-gradient(-45deg, transparent 75%, #666 75%);
+    background-image: -o-linear-gradient(45deg, #666 25%, transparent 25%), 
+        -o-linear-gradient(-45deg, #666 25%, transparent 25%), 
+        -o-linear-gradient(45deg, transparent 75%, #666 75%), 
+        -o-linear-gradient(-45deg, transparent 75%, #666 75%);
+    background-image: linear-gradient(45deg, #666 25%, transparent 25%), 
+        linear-gradient(-45deg, #666 25%, transparent 25%), 
+        linear-gradient(45deg, transparent 75%, #666 75%), 
+        linear-gradient(-45deg, transparent 75%, #666 75%);
+    -moz-background-size: 2px 2px;
+    background-size: 2px 2px;
+    -webkit-background-size: 2px 2.1px; /* override value for webkit 
+    background-position: 0 0, 1px 0, 1px -1px, 0px 1px;
+}
+*/
+
+
+
+
+/* HTML Route Mapper ankit*/
+/* #fitMapBtnUndo { background:url(images/map/undo.png) no-repeat 0px 0px;     background-position: center;} */
+/* #fitMapBtnClear { background:url(images/map/clear.png) no-repeat 0px 0px;     background-position: center;    } */
+/* #fitMapBtnPlotBack { background:url(images/map/plotback.png) no-repeat 0px 0px;     background-position: center; } */
+/* #fitMapBtnOutBack { background:url(images/map/outback.png) no-repeat 0px 0px;    background-position: center;} */
+/* #fitMapBtnSave { background:url(images/map/save.png) no-repeat 0px 0px;     background-position: center;} */
+
+/* #fitMapBtnSearch { background:url(images/map/search.png) no-repeat 0px 0px; min-height: 24px; min-width: 24px; display: block; float: right; margin-right: 13px; cursor: pointer;} */
+#fitMapBtnSearch {
+    /* background: url(images/map/search.png) no-repeat right top; */
+    min-height: 24px;
+    min-width: 24px;
+    cursor: pointer;
+    right: 16px;
+    position: absolute;
+    font-size: 20px;
+    color: #fff;
+    top: 0px;
+    background: #f64c1e;
+    padding: 6px 11px;
+    bottom: 0px;
+}
+.main-box::before {
+    display: block;
+    clear: both;
+    content: "";
+}
+#fitMapDistance
+{
+	padding-top: 15px;
+	padding-left: 15px;
+}
+	
+#fitMapDistance span
+{
+	font-size: 12px;
+	color: #6E6E6E;
+	
+}
+/* HTML Route Mapper ankit*/
+.fitMapBtn {
+    min-width: 24px;
+    min-height: 24px;
+    background-position: left center;
+    display: block;
+}
+/* HTML Route Mapper ankit*/
+#fitSearchText {
+    color: #6E6E6E;
+    font-size: 12px;
+    font-family: helvetica, Arial;
+    padding: 0px 8px;
+}
+/*ankit*/
+#fitSearchAddress {
+    border-color: Gray;
+    width: 100%;
+    margin-left: 0px;
+    border: 1px solid #cac5c5;
+    font-size: 13px;
+    padding: 8px 9px;
+    line-height: 13px;
+    float: left;
+    margin-bottom: 0px;
+}
+/*ankit*/
+/* .fitMapBtnText */
+/* { */
+	/* margin-left: 50px; */
+	/* font-family: Arial; */
+	/* font-size: 14px; */
+	/* font-weight: bold; */
+/* } */
+
+#fitDistanceType, #fitDistance
+{
+	margin-left: 5px;
+}
+
+#fitActivity, #fitExercise, #fitEvent
+{
+	width: 128px;
+	font-size: 14px;
+	padding: 3px;
+}
+
+#fitEvent
+{
+	width: 344px;
+}
+
+#fitDuration, #fitDate, #fitPulse, #fitCalories
+{
+	width: 125px;
+	font-size: 14px;
+	padding: 3px;
+}
+
+#fitRouteKeywords, #fitRouteDesc, #fitRouteTitle
+{
+	font-size: 14px;
+	padding: 3px;
+	width: 336px;
+}
+
+#fitMappedActivity label
+{
+	font-size: 11px;
+	font-weight: bold;
+	padding-right: 10px;
+	text-align: left;
+}
+
+.fitLabel
+{
+	text-align: right;
+	width: 75px;
+}
+
+#fitSaveDialog
+{
+	overflow:hidden;
+}
+
+#fitMappedActivity hr
+{
+	width: 425px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	color: #A6C9E2;
+}
+
+#fitMappedActivity button
+{
+	margin-top: 15px;
+}
+
+div#fitMappedActivity label.error
+{
+	display: block;
+}
+
+#ui_tpicker_time_label_fitDuration
+{
+	float:left;
+	padding-right: 5px;
+}
+
+.ui-datepicker-current
+{
+	display: none;
+}
+
+/*ankit*/
+#fitControlPanel
+{
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    height: auto;
+	width: 100%; /*Width of left column*/
+	/*background: white; 
+	height: 100%;
+	border-right: 1px solid #6E6E6E;*/
+}
+/*ankit*/		
+.fitControlPanelMapInner
+{
+	padding-top: 0px;
+}
+		
+
+
+#fitMapContentWrapper
+{
+	float: left;
+	width: 100%;
+}
+		
+#fitMapContentColumn
+{
+	margin-left: 199px; /*Set left margin to fitControlPanelWidth*/
+}
+
+#oseMapperControl table tbody tr td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+table#nosilverlight td
+{
+    text-align: center;
+    vertical-align: middle;
+}
+
+#fitEvent
+{
+	width: 344px;
+}
+
+div#oseFilterPanel ul
+{
+   margin-bottom: 0px;
+}
+
+div#fitMap
+{
+	width: 100%; height: 600px; margin: auto; margin-top: 0px; border: 1px solid gray;
+}
+
+div#fitAltChart
+{
+	width:100%; height:200px; margin: auto; border: 1px solid gray;
+}
+
+.ose-website {margin-top: 10px; }
+
+.chartContainer {
+    display: none;
+}
+
+#toggleUnit {
+    display: none;
+}
+/* /ankt/ */
+.main-box {
+    float: left;
+    width: 100%;
+    background-color: #f9f9f9;
+    z-index: 1;
+    position: absolute;
+    border-top: 1px solid #c8c7cc;
+    top: 0px;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    box-shadow: 0px 2px 0px #f1e0e069;
+    padding-top: 10px;
+    padding-bottom: 3px;
+}
+.undo-div{}
+.undo-div ul {
+    float: left;
+    width: 100%;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+.undo-div li {
+    float: left;
+    margin-top: 0px;
+    width: 20%;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.undo-div a {
+    display: block;text-align: center;
+}
+.undo-div i {
+    font-size: 20px;
+    font-weight: bold;
+    color: #8e8e93;
+}
+.undo-div span {
+    font-size: 12px;
+    font-weight: bold;
+    color: #8e8e93;
+    width: 100%;
+    text-transform: capitalize;
+    text-align: center;
+    float: left;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 28px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 21px;
+    width: 20px;
+    left: 2px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #ff4401;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #ff4401;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+.ab1{}
+.ab2{}
+.slider.round:before {
+  border-radius: 50%;
+}
+.clc{float:right;}
+/* .gmnoprint{opacity: inherit !important;} */
+/* .gmnoprint img{} */
+
+/* .customMap{ */
+		/* background:rgba(0,0,0,.44)  !important; */
+	    /* -webkit-filter: grayscale(100%)  !important;  */
+	    /* -o-filter: grayscale(100%)  !important; */
+	    /* -moz-filter: grayscale(100%)  !important;  */
+		/* filter: grayscale(100%) !important; */
+    /* background: url(http://192.168.225.50/result/public/css/fitness-mapper/css/images/map/bgalfa.png); */
+/* }  */
+/* .gm-style div:nth-child(1){background:url(http://192.168.225.50/result/public/css/fitness-mapper/css/images/map/bgalfa.png);} */
+/* responsive css */
+@media only screen and ( min-width:768px) and ( max-width:768px){
+.buttonItem img {
+    height: 24px;
+    width: 24px;
+}
+}
+@media only screen and ( min-width:993px) and ( max-width:1024px){
+.buttonItem img {
+    height: 24px;
+    width: 24px;
+}
+}
+@media (max-width: 767px){
+.workoutGradient {
+    float: right;
+    width: 100%;
+    top: 135px;
+}
+.ab1 {
+    width: 50%;
+    float: left;
+}
+.ab2 {
+    width: 50%;
+    float: left;
+}
+.distanceDiv {
+    float: left;
+    height: auto;
+    width: 50%;
+    border-bottom: 0px solid #487ACA;
+    padding: 8px 13px;
+    margin-bottom: 3px;
+}
+.elevationDiv {
+    float: left;
+    height: auto;
+    width: 50%;
+    padding: 8px 13px;
+    border-bottom: 0px solid #487ACA;
+    margin-bottom: 3px;
+	clear: none;
+}
+.caloriesDiv {
+    float: left;
+    height: auto;
+    width: 50%;
+    border-bottom: 0px solid #487ACA;
+    padding: 4px 2px;
+    clear: none;
+}
+.timeDiv {
+    float: left;
+    height: auto;
+    width: 50%;
+    border-bottom: 0px solid #487ACA;
+    clear: none;
+    padding: 2px 24px;
+}
+.undo-div li {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.main-box {
+    padding-bottom: 10px;
+}
+
+}
+@media (max-width: 767px){
+	#conte {
+    width: 100%;
+}
+}
+

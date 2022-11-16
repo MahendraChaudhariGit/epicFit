@@ -1,0 +1,31 @@
+<div class="vp-input input-star-rating">
+    <h3 class="vp-index pull-left">{{ $index + 1 }}. &nbsp;&nbsp;</h3>
+
+    <div class="input-header">
+        <h3>
+            <!-- label -->
+            <i class="fa fa-arrow-right" aria-hidden="true"></i> <span ng-bind-html="input.label"></span> <sup ng-if="input.isRequired">*</sup>
+            <!-- description -->
+            <span ng-if="input.description" class="description"><br>{{ input.description }}</span>
+        </h3>
+    </div> <!-- end: INPUT HEADER -->
+
+    <div class="input-body mb">
+        <ul class="star-rating">
+            <li ng-repeat="i in vpForm.range(1, input.itemCount + 1)">
+                <i ng-if="i <= input.value" class="{{ input.iconFill }}" aria-hidden="true" ng-click="vpForm.setRatingValue(i)"></i>
+                <i ng-if="i > input.value" class="{{ input.icon }}" aria-hidden="true" ng-click="vpForm.setRatingValue(i)"></i>
+
+                 <br><br> <span class="select-multiple"><b>{{ i }}</b></span>
+            </li>
+        </ul> <!-- end: STAR RATING -->
+
+        <input type="hidden" ng-keypress="vpForm.pressEnter($event)" name="{{ input.name }}" value="{{ input.value }}" ng-model="input.value" placeholder="{{ input.placeholder }}" class="form-control mb">
+
+        <div ng-if="input.errors.length > 0" class="vp-tooltip">
+            <span ng-repeat="error in input.errors">{{ error.message }} <br></span>
+        </div>
+
+    </div> <!-- end: INPUT BODY -->
+</div> <!-- end: INPUT TEXT NAME -->
+<div class="clear-both"></div>

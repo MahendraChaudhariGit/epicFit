@@ -1,0 +1,818 @@
+/*
+|---------------------------------------------------------------------
+| 01 - VP SOFT INPUT LIST (PARENT SECTION)
+|---------------------------------------------------------------------
+**/
+/*body {*/
+    /*color: #ff4401;*/
+/*}*/
+.vp-form-container {
+    display: inline-block;
+    width: 100%;
+}
+.vp-form-input-list {
+    list-style-type: none;
+}
+.vp-form-input-list {}
+.vp-form-input-list input,
+.vp-form-input-list textarea
+{
+    border-bottom: 1px solid #ff4401 !important;
+
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+.vp-form-input-list textarea {
+    resize: none;
+    box-sizing: content-box;
+}
+input[type="file"] {
+    border-bottom: none !important;
+}
+
+
+.vp-form-input-list input:focus{
+    box-shadow: none;
+}
+.vp-form-input-list .enter-btn {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: visibility 0s, opacity 0.4s linear;
+    transition: visibility 0s, opacity 0.4s linear;
+}
+
+.vp-form-input-list .enter-btn.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.vp-form-input-list > li{
+    display: inline-block;
+    width: 100%;
+    padding: 100px 0px;
+    float: left;
+    clear: both;
+}
+.vp-form-input-list .vp-input {
+    -webkit-transition: all .4s;
+    -moz-transition: all .4s;
+    -ms-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s;
+
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    -ms-opacity: 0;
+    -o-opacity: 0;
+    -khtml-opacity: 0;
+    opacity: 0;
+}
+
+
+.vp-form-input-list .vp-form-active .vp-input{
+    -webkit-opacity: 1 !important;
+    -moz-opacity: 1 !important;
+    -ms-opacity: 1 !important;
+    -o-opacity: 1 !important;
+    -khtml-opacity: 1 !important;
+    opacity: 1 !important;
+}
+
+
+.vp-form-input-list h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.vp-form-input-list h3 i{
+    font-size: 14px;
+    color: #ff8f66;
+    margin-right: 5px;
+}
+
+.vp-form-input-list .vp-index {
+    margin-top: 0px;
+    margin-bottom: 0;
+}
+
+.vp-form-input-list .title-icon {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color: #ff4401;
+}
+
+.vp-form-input-list .form-control {
+    display: inline-block;
+    width: 100%;
+    font-size: 24px;
+    height: 40px;
+    color: #ff8f66;
+    border: none;
+    box-shadow: 0px 0px;
+}
+
+.vp-form-input-list .enter-btn {
+    margin-top: 10px;
+}
+.vp-form-input-list button {
+    font-size: 19px;
+}
+
+.vp-form-input-list .description {
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-left: 20px !important;
+    display: inline-block;
+    width: 100%;
+}
+
+.vp-form-input-list .check-img {
+    display: none;
+    float: right;
+    margin-top: -5px;
+    margin-right: -5px;
+    margin-bottom: -60px;
+
+    -webkit-border-radius:4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+
+    position: relative;
+    z-index: 1000;
+}
+
+.vp-form-input-list .click-box {
+    list-style: none;
+    padding-left: 0px;
+}
+
+.vp-form-input-list .click-box li{
+    width: 150px;
+    height: 200px;
+    float: left;
+    padding: 5px;
+    text-align: center;
+
+    margin-left: 23px;
+    margin-bottom: 20px;
+    border: 1px solid #ff4401;
+
+    -webkit-border-radius:5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.vp-form-input-list .yes {
+    background: #ff4401;
+    color: #ffffff;
+    font-size: 12px;
+    padding: 1px 5px;
+    margin-right: 8px;
+
+    border: 1px solid #ff8f66;
+
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 3px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.vp-form-input-list .yes-active {
+    display: none;
+    background: #ff4401;
+    color: #ffffff;
+    font-size: 11px;
+    padding: 2px 5px;
+
+    border: 1px solid #ff8f66;
+
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.vp-form-input-list .select-multiple {
+    background: #ff4401;
+    color: #ffffff;
+    font-size: 11px;
+    padding: 2px 5px;
+    margin-right: 8px;
+
+    border: 1px solid #ff8f66;
+
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.vp-form-input-list .click-box li i {
+    font-size: 50px;
+    padding: 20px;
+    color: #ff4401;
+    margin: 20px;
+}
+
+.vp-form-input-list .press-enter {
+    font-size: 12px;
+    color: #ff4401;
+    margin-left: 5px;
+}
+
+.vp-form-input-list .form-control,
+.vp-form-input-list .description,
+.vp-form-input-list .multiple-chose,
+.vp-form-input-list .accept-deny-content,
+.vp-form-input-list .yes-no-content,
+.vp-form-input-list .profile-img,
+.vp-form-input-list .input-month-list,
+.vp-form-input-list .add-img img,
+.vp-form-input-list .add-video iframe,
+.vp-form-input-list .submit > a,
+.vp-form-input-list .submit p,
+.vp-form-input-list input,
+.vp-form-input-list button {
+    margin-left: 23px;
+}
+
+.vp-form-input-list .input-picture-upload .profile-img,
+.vp-form-input-list .input-picture-upload input {
+    margin-left: 0px;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+    margin: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type=date]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+/*
+|---------------------------------------------------------------------
+| 02 - INPUT SELECT MONTH
+|---------------------------------------------------------------------
+**/
+.vp-form-input-list .input-select-month .input-body .input-month {
+    width: 100%;
+    font-size: 28px;
+    line-height: 32px;
+    color: #ff4401;
+    padding: 5px 0px;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid;
+}
+
+.vp-form-input-list .input-select-month .input-body .input-month:focus {
+    outline: none;
+}
+
+.vp-form-input-list .input-select-month .input-body .input-month-list {
+    list-style: none;
+    padding-left: 0px;
+    display: inline-block;
+    width: 100%;
+}
+
+.vp-form-input-list .input-select-month .input-body .input-month-list li {
+    width: 100%;
+    font-size: 18px;
+    color: #ff4401;
+    padding: 8px 15px;
+    margin-bottom: 5px;
+
+    border: 1px solid;
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.vp-form-input-list .input-select-month .input-body .input-month-list li:hover {
+    cursor: pointer;
+    background: #ffece6;
+}
+
+/*
+|---------------------------------------------------------------------
+| 02 - CLICK BOX HOVER EFFECT
+|---------------------------------------------------------------------
+**/
+.vp-form-input-list .click-box li:hover > img,
+.vp-form-input-list .click-box li.active > img {
+    display: block;
+}
+
+.vp-form-input-list .click-box li:hover,
+.vp-form-input-list .click-box li.active {
+    background: #ffece6;
+    cursor: pointer;
+}
+
+.vp-form-input-list .click-box li:hover > span.yes,
+.vp-form-input-list .click-box li.active > span.yes {
+    display: none;
+}
+
+.vp-form-input-list .click-box li:hover > span.yes-active,
+.vp-form-input-list .click-box li.active > span.yes-active {
+    display: inline-block;
+}
+
+
+
+
+/*
+|---------------------------------------------------------------------
+| 03 - CLICK BOX BOX CONTENT
+|---------------------------------------------------------------------
+**/
+.vp-form-input-list .box-content {
+    display: inline-block;
+    width: 100%;
+    height: 130px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.vp-form-input-list .box-content h3 {
+    font-size: 50px;
+    padding: 20px;
+    color: #ff4401;
+}
+
+.vp-form-input-list .box-content img {
+    width: 100%;
+    height: 130px;
+    padding: 5px;
+    display: inline-block !important;
+    position: relative;
+    z-index: 100;
+}
+.vp-form-input-list .vp-wrap-custom-value {
+    text-align: center;
+}
+
+.vp-form-input-list .box-content .vp-wrap-custom-value {
+    position: absolute;
+    top: 40%;
+    text-align: center;
+    display: inline-block;
+    clear: both;
+    float: none;
+    left: 0;
+    width: 100%;
+}
+
+
+
+/*
+|---------------------------------------------------------------------
+| 04 - INPUT MCQ QUESTION
+|---------------------------------------------------------------------
+**/
+.vp-form-input-list .input-mcq-question .multiple-chose {
+    list-style: none;
+    padding-left: 0px;
+}
+.vp-form-input-list .input-mcq-question .multiple-chose li {
+    width: 225px;
+    font-size: 18px;
+    color: #ff4401;
+    padding: 8px 15px;
+    margin-bottom: 10px;
+
+    border: 1px solid;
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.vp-form-input-list .input-mcq-question .multiple-chose li i {
+    display: none;
+}
+.vp-form-input-list .input-mcq-question .multiple-chose li:hover > i {
+    display: inline-block;
+}
+.vp-form-input-list .input-mcq-question .multiple-chose li:hover {
+    cursor: pointer;
+    background: #ffece6;
+}
+
+/*
+|---------------------------------------------------------------------
+| 05 - INPUT ACCEPT DENY
+|---------------------------------------------------------------------
+**/
+.vp-form-input-list .input-accept-deny .accept-deny-content {
+    list-style: none;
+    padding-left: 0px;
+}
+
+.vp-form-input-list .input-accept-deny .accept-deny-content li {
+    width: 225px;
+    font-size: 18px;
+    color: #ff4401;
+    padding: 8px 15px;
+    margin-bottom: 10px;
+
+    border: 1px solid;
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.vp-form-input-list .input-accept-deny .accept-deny-content li i {
+    display: none;
+}
+.vp-form-input-list .input-accept-deny .accept-deny-content li:hover > i {
+    display: inline-block;
+}
+.vp-form-input-list .input-accept-deny .accept-deny-content li:hover {
+    cursor: pointer;
+    background: #ffece6;
+}
+
+/*
+|---------------------------------------------------------------------
+| 06 - input-text-name
+|---------------------------------------------------------------------
+**/
+.vp-form-input-list .input-yes-no-btn .yes-no-content {
+    list-style: none;
+    padding-left: 0px;
+}
+
+.vp-form-input-list .input-yes-no-btn .yes-no-content li {
+    width: 280px;
+    font-size: 18px;
+    color: #ff4401;
+    padding: 8px 15px;
+    margin-bottom: 10px;
+
+    border: 1px solid;
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.vp-form-input-list .input-yes-no-btn .yes-no-content li i {
+    display: none;
+}
+.vp-form-input-list .input-yes-no-btn .yes-no-content li:hover > i {
+    display: inline-block;
+}
+.vp-form-input-list .input-yes-no-btn .yes-no-content li:hover {
+    cursor: pointer;
+    background: #ffece6;
+}
+
+.vp-form-input-list .input-yes-no-btn .yes-no-content li.active {
+    background: #ffece6;
+}
+
+.vp-form-input-list .input-yes-no-btn .yes-no-content li.active > i {
+    display: inline-block;
+}
+
+
+
+/*
+|---------------------------------------------------------------------
+| 07 - INPUT STAR RATING
+|---------------------------------------------------------------------
+**/
+.vp-form-input-list .input-star-rating .star-rating {
+    list-style: none;
+    padding-left: 0px;
+}
+.vp-form-input-list .input-star-rating .star-rating li {
+    float: left;
+    text-align: center;
+    margin-left: 23px;
+}
+.vp-form-input-list .input-star-rating .star-rating li img:hover {
+    background: #ffece6;
+}
+.vp-form-input-list .rating-active {
+    background: #ff4401;
+}
+
+/*
+|---------------------------------------------------------------------
+| 08 - INPUT LOVE RATING
+|---------------------------------------------------------------------
+**/
+.vp-form-input-list .input-love-rating .love-rating {
+    list-style: none;
+    padding-left: 0px;
+}
+.vp-form-input-list .input-love-rating .love-rating li {
+    float: left;
+    text-align: center;
+    margin-left: 23px;
+}
+.vp-form-input-list .input-love-rating .love-rating li img:hover {
+    background: #ffece6;
+}
+
+
+
+/*
+|---------------------------------------------------------------------
+| 09 - INPUT NUMBER RATING
+|---------------------------------------------------------------------
+**/
+.vp-form-input-list .input-number-rating .frequently-count {
+    list-style: none;
+    padding-left: 0px;
+}
+
+
+.vp-form-input-list .input-number-rating .frequently-count li {
+    font-size: 28px;
+    color: #ff4401;
+    float: left;
+    padding: 10px 40px;
+
+    border-top: 1px solid #ff4401;
+    border-right: 1px solid #ff4401;
+    border-bottom: 1px solid #ff4401;
+}
+
+.vp-form-input-list .input-number-rating .frequently-count li:first-child {
+    margin-left: 23px;
+    border-left: 1px solid #ff4401;
+
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+}
+
+.vp-form-input-list .input-number-rating .frequently-count li:last-child {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.vp-form-input-list .input-number-rating .frequently-count li:hover {
+    background: #ffece6;
+}
+
+.number-rating-active {
+    background: #ff4401 !important;
+    color: #ffffff !important;
+}
+
+
+
+/*
+|---------------------------------------------------------------------
+| 10 - input-text-name
+|---------------------------------------------------------------------
+**/
+
+.vp-form-input-list .add-img img {
+    width: 400px;
+    height: 300px;
+}
+
+.vp-form-input-list .profile-img img{
+    width: auto;
+    max-height: 150px;
+    padding: 5px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+}
+
+.vp-form-input-list .add-video iframe {
+    width: 400px;
+    height: 300px;
+}
+
+.vp-form-input-list .submit p {
+    padding-top: 10px;
+}
+.vp-form-input-list .submit {
+    margin-bottom: 60px;
+}
+
+.vp-form-input-list .mb {
+    margin-bottom: 20px;
+}
+
+.vp-form-input-list .mt-15 {
+    margin-top: 15px;
+}
+
+
+/*
+|--------------------------------------------------------------------
+| 10 - VP FORM ERROR TOOL TIP
+|--------------------------------------------------------------------
+*/
+.vp-form-input-list .vp-input,
+.vp-form-input-list .input-body {
+    position: relative;
+}
+
+.vp-tooltip {
+    visibility: visible;
+    width: auto;
+    background-color: red;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 8px;
+    position: absolute;
+    z-index: 1;
+    bottom: 15px;
+    left: 80px;
+    margin-left: -60px;
+}
+
+.vp-tooltip::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 10%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent red transparent;
+}
+
+/*.vp-form-input-list .vp-input .vp-tooltip {*/
+    /*visibility: visible;*/
+/*}*/
+
+
+
+/*
+|---------------------------------------------------------------------
+| 11 - VP PROGRESS BAR
+|---------------------------------------------------------------------
+**/
+.vp-progress-bar {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    left: 0;
+    bottom: 0;
+    padding-bottom: 10px;
+    background: #EFEFF4;
+    border-top: 1px solid #dddddd;
+    z-index: 9999;
+}
+
+.vp-progress-bar .vp-progress {
+    padding: 8px 0px 8px 85px;
+}
+
+.vp-progress-bar .vp-progress .vp-progress-content {
+    float: left;
+    width: 45%;
+}
+
+.vp-progress-bar .vp-progress .vp-progress-content progress {
+    width: 100%;
+    height: 5px;
+
+    -webkit-transition: all 500ms;
+   -moz-transition: all 500ms;
+     -o-transition: all 500ms;
+        transition: all 500ms;
+}
+.vp-progress-bar .vp-progress .vp-progress-content p {
+    margin-bottom: -8px;
+    color: #ff4401;
+}
+.vp-progress-bar .vp-progress .create-type-form {
+    float: right;
+}
+.vp-progress-bar .vp-progress .create-type-form .create-account {
+    text-decoration: none;
+    padding: 2px 10px;
+    background: #ff4401;
+    color: #ffffff;
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.vp-progress-bar .vp-progress .create-type-form a:hover {
+    opacity: 0.7;
+}
+.vp-progress-bar .vp-progress .create-type-form i {
+    padding: 15px 15px;
+    margin-left: 5px;
+    color: #ffffff;
+    background: #ff4401;
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+
+.vp-form-input-list .vp-input .btn-primary:active,
+.vp-form-input-list .vp-input .btn-primary:visited,
+.vp-form-input-list .vp-input .btn-primary:focus
+{
+    background: #ff571a !important;
+    border-color: #ff571a !important;
+}
+
+.txt-color-accent {
+    color: #ff4401;
+}
+
+.dib {
+    display: inline-block !important;
+}
+
+.mli-0 {
+    margin-left: 0px !important;
+}
+
+.pli-23 {
+    padding-left: 23px !important;
+}
+.pli-18 {
+    padding-left: 18px !important;
+}
+
+.dib-100 {
+    display: inline-block;
+    width: 100%;
+}
+
+.clear-both {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    float: none;
+    clear: both;
+}
+
+.vp-form-input-list .input-body .bootstrap-select .dropdown-menu {
+    left: 22px;
+}
+
+.vp-form-input-list .input-body .dropdown-menu-ml-0 .bootstrap-select .dropdown-menu {
+    left: 0px;
+}
+
+
+/** OVER RIDE ANGULAR JS CSS **/
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide:not(.ng-hide-animate) {
+    display: inline-block !important;
+    visibility: hidden !important;
+}
+
+.vp-form-input-list textarea:focus,
+.vp-form-input-list select:focus,
+.vp-form-input-list input[type="text"]:focus,
+.vp-form-input-list input[type="password"]:focus,
+.vp-form-input-list input[type="datetime"]:focus,
+.vp-form-input-list input[type="datetime-local"]:focus,
+.vp-form-input-list input[type="date"]:focus,
+.vp-form-input-list input[type="month"]:focus,
+.vp-form-input-list input[type="time"]:focus,
+.vp-form-input-list input[type="week"]:focus,
+.vp-form-input-list input[type="number"]:focus,
+.vp-form-input-list input[type="email"]:focus,
+.vp-form-input-list input[type="url"]:focus,
+.vp-form-input-list input[type="search"]:focus,
+.vp-form-input-list input[type="tel"]:focus,
+.vp-form-input-list input[type="color"]:focus {
+    box-shadow: none !important;
+    border-color: transparent !important;
+    / background-color: #EFEEF3 !important;
+}
+
+.vp-form-input-list .vp-item .input-body .help-block {
+    display: none !important;
+}
+
+.vp-form-input-list .vp-item .input-body .bs-searchbox input {
+    margin-left: 0px !important;
+    padding-left: 10px;
+}
+
+.vp-form-input-list .vp-item .input-body .milestones-date-cls {
+    border: none !important;
+}
+
+.vp-form-input-list .vp-item .input-body .pencil_find_sibling {
+    padding-right: 34px;
+    padding-top: 16px;
+}

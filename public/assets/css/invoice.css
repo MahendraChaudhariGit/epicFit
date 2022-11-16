@@ -1,0 +1,73 @@
+select {
+    -moz-appearance:menulist !important;
+    -webkit-appearance: menulist! important;
+}
+.custom-inv-row{
+	padding-right: 0px !important;
+	padding-left: 5px !important;
+}
+.first-inv-row{
+	padding-right: 0px !important;
+	padding-left: 15px !important;
+}
+textarea.textarea {
+	resize: none !important;
+	overflow-y: auto !important;
+	height: 100px !important;		
+}
+
+textarea.product-name {
+    resize: none !important;
+    overflow-y: auto !important;
+    height: 92px;
+}
+
+.modal-body {height: auto;} 
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0; 
+	color:#000;
+}
+.popover{width:200px !important;z-index:999999 !important;}
+
+#invoiceModal #discount-submit {
+	display: none;
+}
+#invoiceModal #amount {
+	display: none;
+}
+
+.wd-400{width:400px !important;}
+
+.invoice-date-header{margin: 10px 0px 0px;}
+
+.invoice-email-modal-header{margin-top: -10px !important;}
+
+
+[class ^= inv-col-]{
+	
+}
+.inv-col-1{
+	width:80px;
+	float:left;
+}
+.inv-col-2{
+	width:120px;
+	float:left;
+}
+.inv-col-3{
+	width:160px;
+	float:left;
+}
+
+@media only screen and (max-width: 480px) {
+	.invoice-responsive{
+		min-height: .01%;
+		overflow-x: auto;
+	}
+}

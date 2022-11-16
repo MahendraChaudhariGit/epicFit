@@ -1,0 +1,46 @@
+<div class="vp-input input-male-female">
+    <h3 class="vp-index pull-left">{{ $index + 1 }}. &nbsp;&nbsp;</h3>
+
+    <div class="input-header">
+        <h3><i class="fa fa-arrow-right" aria-hidden="true"></i> <span ng-bind-html="input.label"></span> <sup ng-if="input.isRequired">*</sup></h3>
+
+        <i ng-if="input.icon" class="{{ input.icon }} title-icon" aria-hidden="true"></i>
+        <img ng-if="input.iconUrl" class="title-icon" src="{{ input.iconUrl }}" alt="USER">
+
+        <div ng-if="input.description" class="description mb">
+            {{ input.description }}
+        </div> <!-- end: DESCRIPTION -->
+    </div> <!-- end: INPUT HEADER -->
+
+
+    <div class="input-body mb">
+        <ul class="click-box clear-both dib">
+            <li ng-repeat="option in input.options" ng-click="vpForm.setCheckboxValue($index)" class="{{ (input.activeOptions.indexOf(option.value) != '-1') ? 'active' : '' }}">
+                <img class="check-img" src="result/images/check-right.png" alt="Image">
+                <div class="box-content">
+                    <p ng-if="option.icon"><i class="{{ option.icon }}" aria-hidden="true"></i></p>
+                    <p ng-if="option.iconUrl"><img src="{{ option.iconUrl }}" alt="Image"></p>
+
+                    <p ng-if="option.isDataReceiving=='yes'" class="vp-wrap-custom-value">
+                        <span contenteditable
+                              strip-br="true"
+                              required ng-model="option.customValue" ng-click="vpForm.stopPropagation($event)">{{ option.value }}</span><br>
+                        <span class="btn btn-success btn-xs" ng-click="vpForm.updateCheckboxOptionValue($event, $index)">Ok</span>
+                    </p>
+                    <p ng-if="option.isDataReceiving=='no'" class="vp-wrap-custom-value">{{ option.value }}</p>
+                </div> <!-- end: BOX CONTENT -->
+
+                <span ng-if="option.key" class="yes">{{ option.key }}</span>
+                <span ng-if="option.key" class="yes-active">key <b>{{ option.key }}</b></span>
+                {{ option.label }}
+            </li>
+        </ul> <!-- end: CLICK BOX -->
+
+        <input type="hidden" ng-keypress="vpForm.pressEnter($event)" name="{{ input.name }}" value="{{ input.value }}" ng-model="input.value" placeholder="{{ input.placeholder }}" class="form-control mb">
+
+        <div ng-if="input.errors.length > 0" class="vp-tooltip">
+            <span ng-repeat="error in input.errors">{{ error.message }} <br></span>
+        </div>
+    </div> <!-- end: INPUT BODY -->
+
+</div> <!-- end: INPUT MALE FEMALE -->

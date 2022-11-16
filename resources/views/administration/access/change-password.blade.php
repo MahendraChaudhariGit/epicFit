@@ -1,0 +1,70 @@
+@extends('administration.layouts.app')
+
+@section('title')
+@stop()
+
+@section('meta')
+@stop()
+
+@section('before-styles-end')
+@stop()
+
+@section('required-styles-for-this-page')
+@stop()
+
+@section('page-title')
+    Administration  <small>Change Password</small>
+@stop()
+
+@section('content')
+    {!! Form::open(['route' => ['administration.access.user.change-password', $user->id], 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'post']) !!}
+
+    <div class="box box-success">
+        <div class="box-header with-border">
+            <h3 class="box-title">{{ trans('labels.backend.access.users.change_password_for', ['user' => $user->name]) }}</h3>
+
+            <div class="box-tools pull-right">
+                @include('administration.access.includes.partials._header-buttons')
+            </div>
+        </div><!-- /.box-header -->
+
+        <div class="box-body">
+
+            <div class="form-group">
+                {!! Form::label('password', trans('validation.attributes.backend.access.users.password'), ['class' => 'col-lg-2 control-label', 'placeholder' => trans('validation.attributes.backend.access.users.password')]) !!}
+                <div class="col-lg-10">
+                    {!! Form::password('password', ['class' => 'form-control']) !!}
+                </div>
+            </div><!--form control-->
+
+            <div class="form-group">
+                {!! Form::label('password_confirmation', trans('validation.attributes.backend.access.users.password_confirmation'), ['class' => 'col-lg-2 control-label', 'placeholder' => trans('validation.attributes.backend.access.users.password_confirmation')]) !!}
+                <div class="col-lg-10">
+                    {!! Form::password('password_confirmation', ['class' => 'form-control']) !!}
+                </div>
+            </div><!--form control-->
+
+        </div><!-- /.box-body -->
+    </div><!--box-->
+
+    <div class="box box-info">
+        <div class="box-body">
+            <div class="pull-left">
+                <a href="{{route('administration.access.users.index')}}" class="btn btn-danger btn-xs">{{ trans('buttons.general.cancel') }}</a>
+            </div>
+
+            <div class="pull-right">
+                <input type="submit" class="btn btn-success btn-xs" value="{{ trans('buttons.general.crud.update') }}" />
+            </div>
+            <div class="clearfix"></div>
+        </div><!-- /.box-body -->
+    </div><!--box-->
+
+    {!! Form::close() !!}
+@stop()
+
+@section('required-script-for-this-page')
+@stop()
+
+@section('script-handler-for-this-page')
+@stop()

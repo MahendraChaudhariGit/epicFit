@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>Untitled Document</title>
+<link type="text/css" rel="stylesheet" href="style.css" />
+
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.10.3.custom.min.js"></script>
+<script type="text/javascript" src="js/jquery.json-2.4.min.js"></script>
+<script type="text/javascript" src="js/jquery.placeholder.js"></script>
+<script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="js/popup.js"></script>
+<script type="text/javascript" src="js/pt.js"></script>
+<script type="text/javascript" src="jwplayer/jwplayer.js"></script>
+</head>
+
+<body>
+	<div align="center">
+        <div class="header">
+            <div class="pg_width"><img src="images/header.png" width="100%" height="113" /></div>
+        </div>
+        <div class="content_box pg_width">
+                <div class="left mob_view"><img src="images/left_menu.png" width="100%" height="765" /></div>
+                <div class="left pt">
+                    <h1>Manage a Program</h1>
+                    <div class="manage_det">
+                    	<div>
+                            <div class="left">
+                                <label>Program name</label>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            </div>
+                            <a class="right btn_white" href="javascript:void(0)" onclick="PT.UI.showEPForm()">edit details</a>
+                            <div class="clr"></div>
+                        </div>
+                    	<form action="javascript:void(0)" onsubmit="return PT.UI.updateProgram(this)">
+	                    	<div class="error-msg">Please enter a program name.</div>
+                            <div class="left">
+                                <input type="text" name="pname" placeholder="Program name" class="txtbox" />
+                                <p><textarea name="pdesc" placeholder="Description (if any)" class="txtbox"></textarea></p>
+                            </div>
+                            <div class="right actbtns">
+                            	<div class="right"><input type="submit" value="save" class="btn_white" /></div>
+                                <div class="right"><a href="javascript:void(0)" class="btn_white" onclick="PT.UI.hideEPForm()">cancel</a></div>
+                                <div class="clr"></div>
+                            </div>
+                            <div class="clr"></div>
+                        </form>
+                    </div>
+                    
+                    <p id="pt-build-instruction">Build your custom program by clicking the plus symbol to add exercies to each category.</p>
+                    <div id="pt-accordion" class="mbtm20">
+                    	<h3 class="warm-up">
+                        	<div class="left">Warm Up</div>
+                            <div class="right"><a href="javascript:void(0)"><img src="images/expand.png" width="23"></a></div>
+                            <div class="clr"></div>
+                        </h3>
+                        <ul class="cat_det"></ul>
+                        
+                    	<h3 class="exercises">
+                        	<div class="left">Exercises</div>
+                            <div class="right"><a href="javascript:void(0)"><img src="images/expand.png" width="23"></a></div>
+                            <div class="clr"></div>
+                        </h3>
+                        <div class="cat_det"></div>
+                        
+                    	<h3 class="cool-down">
+                        	<div class="left">Cool Down</div>
+                            <div class="right"><a href="javascript:void(0)"><img src="images/expand.png" width="23"></a></div>
+                            <div class="clr"></div>
+                        </h3>
+                        <div class="cat_det"></div>
+                    </div>
+                    
+                    <h3 align="right" id="pt-time-estimate">Total Estimated Time: <span>0 minutes</span></h3>
+                    
+                    <div>
+                    	<a href="index.html" class="left btn_white">&lsaquo; back to programs list</a>
+                        <a href="#" class="right btn_white">plan program &rsaquo;</a>
+                        <div class="clr"></div>
+                    </div>
+                </div>
+                <div class="clr"></div>
+        </div>
+        <div class="footer">
+        	<div class="pg_width"><img src="images/footer.png" width="100%" height="374" /></div>
+        </div>
+        <div class="copyright">            
+            <div class="pg_width"><img src="images/copyright.png" width="100%" height="51" /></div>    
+        </div>
+    </div>
+</body>
+</html>

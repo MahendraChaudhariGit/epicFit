@@ -1,0 +1,33 @@
+<div class="vp-input
+            {{ (input.type == 'text') ? 'input-text-name' : '' }}
+            {{ (input.type == 'email') ? 'input-user-email' : '' }}
+            {{ (input.type == 'number') ? 'input-user-phone' : '' }}
+            {{ (input.type == 'url') ? 'input-url' : '' }}
+">
+    <h3 class="vp-index pull-left">{{ $index + 1 }}. &nbsp;&nbsp;</h3>
+
+    <div class="input-header">
+        <h3>
+            <!-- label -->
+            <i class="fa fa-arrow-right" aria-hidden="true"></i> <span ng-bind-html="input.label"></span> <sup ng-if="input.isRequired">*</sup>
+            <!-- description -->
+            <span ng-if="input.description" class="description"><br>{{ input.description }}</span>
+        </h3>
+
+        <i ng-if="input.icon" class="{{ input.icon }} title-icon" aria-hidden="true"></i>
+        <img ng-if="input.iconUrl" class="title-icon" src="{{ input.iconUrl }}" alt="Image">
+    </div> <!-- end: INPUT HEADER -->
+
+    <div class="input-body mb">
+        <input type="{{ input.type }}" ng-keypress="vpForm.pressEnter($event)" ng-keyup="vpForm.validateInput($index)" ng-blur="vpForm.validateInput($index)" name="{{ input.name }}" value="{{ input.value }}" ng-model="input.value" placeholder="{{ input.placeholder }}" class="form-control">
+
+        <div ng-if="input.errors.length > 0" class="vp-tooltip">
+           <span ng-repeat="error in input.errors">{{ error.message }} <br></span>
+        </div>
+
+        <div ng-class="((input.value) && (vpForm.activeItem == $index)) ? 'enter-btn active' : 'enter-btn'">
+            <button type="button" class="btn btn-primary" ng-click="vpForm.jumpToNextInput()">OK <i class="fa fa-check" aria-hidden="true"></i></button> <span class="press-enter">press <b>ENTER</b></span>
+        </div>
+    </div> <!-- end: INPUT BODY -->
+</div> <!-- end: INPUT TEXT NAME -->
+<div class="clear-both"></div>

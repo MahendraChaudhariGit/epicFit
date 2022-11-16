@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VpSoft Form</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- VP FORM STYLES -->
+    <link rel="stylesheet" href="css/vp-form.css">
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery.windows.js"></script>
+
+    <script src="js/angular.js"></script>
+    <script type="text/javascript" src="js/autogrow.js"></script>
+
+    <!-- VP FORM SCRIPTS | DEPENDENCY = jQuery, Angular.js -->
+    <script src="js/vp-form.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div id="vp-form-container" ng-app="vp-form" ng-controller="vpFormController">
+            <form id="vp-form" action="#">
+
+                <ul class="col-sm-8 col-sm-offset-2 vp-form-input-list">
+                    <li ng-repeat="input in vpForm.inputs" data-index="{{ $index }}" class="vp-item {{ (input.isActive) ? 'vp-form-active' : ''}}">
+                        <div ng-if="input.type == 'text' || input.type == 'email' || input.type == 'number' || input.type == 'url'" ng-include="'./inputs/input-text.html'"></div>
+                        <div ng-if="input.type == 'textarea'" ng-include="'./inputs/input-textarea.html'"></div>
+                        <div ng-if="input.type == 'month'" ng-include="'./inputs/input-month.html'"></div>
+                        <div ng-if="input.type == 'date'" ng-include="'./inputs/input-date.html'"></div>
+                        <div ng-if="input.type == 'file'" ng-include="'./inputs/input-file.html'"></div>
+                        <div ng-if="input.type == 'rating'" ng-include="'./inputs/input-rating.html'"></div>
+                        <div ng-if="input.type == 'rating-number'" ng-include="'./inputs/input-rating-number.html'"></div>
+                        <div ng-if="input.type == 'radio'" ng-include="'./inputs/input-radio.html'"></div>
+                        <div ng-if="input.type == 'radio-vertical'" ng-include="'./inputs/input-radio-vertical.html'"></div>
+                        <div ng-if="input.type == 'checkbox'" ng-include="'./inputs/input-checkbox.html'"></div>
+                        <div ng-if="input.type == 'checkbox-vertical'" ng-include="'./inputs/input-checkbox-vertical.html'"></div>
+                    </li>
+                </ul> <!-- end: VP FORM INPUT LIST -->
+            </form> <!-- end: FORM -->
+
+            <div class="vp-form-input-list" style="display: inline-block; width: 100%; margin-top: 150px">
+                <div class="col-sm-8 col-sm-offset-2 submit">
+                    <a href="javascript:void(0)" ng-click="vpForm.jumpToNextInput()" class="btn btn-lg btn-primary">Submit</a> <span class="press-enter">press <b>ENTER</b></span>
+
+                    <p>Never submit passwords! - <a href="#">Report abuse</a></p>
+                </div> <!-- end: COL8 || SUBMIT -->
+            </div>
+
+            <div class="vp-progress-bar">
+                <div class="col-sm-10 col-sm-offset-2 vp-progress">
+                    <div class="vp-progress-content">
+                        <p>{{ vpForm.percentCompleted }}% complete</p>
+                        <progress value="{{ vpForm.percentCompleted }}" max="100"> </progress>
+                    </div> <!--  -->
+                    <div class="create-type-form">
+                        <a class="create-account" target="_blank" href="http://vpsoft.co/">Powered by Vp-Soft</a>
+                        <a href="javascript:void(0)" ng-click="vpForm.jumpToPrevInput()"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+                        <a href="javascript:void(0)" ng-click="vpForm.jumpToNextInput()"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                    </div> <!--  -->
+                </div> <!-- end: COL8 || SUBMIT -->
+            </div>
+        </div>
+    </div> <!-- end: ROW -->
+</div> <!-- end: CONTAINER -->
+
+<script src="js/inputs.js"></script>
+
+</body>
+</html>

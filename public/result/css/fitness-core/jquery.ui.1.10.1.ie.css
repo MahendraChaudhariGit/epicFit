@@ -1,0 +1,49 @@
+
+.fit-ui .ui-corner-all, .fit-ui .ui-corner-top, .fit-ui .ui-corner-right, .fit-ui .ui-corner-left, .fit-ui .ui-corner-bottom{ border-radius:0px;}
+/*
+ * jQuery UI Tabs 1.10.0
+ *
+ * Copyright 2012, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://jqueryui.com/tabs/
+ */
+
+.fit-ui .ui-state-active,.ui-tabs-selected { border-radius:0px;}
+.fit-ui .ui-tabs-selected { border-radius:0px;}
+.fit-ui .ui-tabs .ui-tabs-nav li{ filter:none;}
+.fit-ui .ui-tabs .ui-tabs-nav li a { border-radius:0px; }
+
+.fit-ui .ui-button .ui-button-text {
+	display: block;
+}
+
+/*
+ * jQuery UI Button 1.10.1
+ *
+ * Copyright 2012, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://jqueryui.com/button/
+ */
+
+.fit-ui .ui-button-text-icon-primary{}
+
+.fit-ui .ui-button-text-icon-primary .ui-button-text,
+.fit-ui .ui-button-text-icons .ui-button-text {}
+
+.fit-ui .ui-button-text-icon-primary .ui-icon{
+	top:50%;
+	margin-top: 5px;
+	margin-bottom:-26px;
+}
+
+.fit-ui .ui-button-icons-only .ui-icon {}
+
+.fit-ui .ui-button-icon-only .ui-icon{
+	top:50%;
+	margin-top: 0px;
+	margin-bottom:-28px;
+}

@@ -1,0 +1,383 @@
+.plannerContainer
+{
+    /*padding: 10px;*/
+}
+.plannerProgress, .plannerSelector
+{
+    margin: 0;
+}
+
+.plannerProgress {
+    /*margin-right: 60px;*/
+}
+
+.selectorContainer
+{
+    float: left;
+    /*width: 580px;*/
+}
+
+.plannerNavigator
+{
+    float: left;
+    width: 700px;
+}
+
+#progressBar {
+    width: 501px;
+    float: left;
+    margin-right: 10px;
+}
+
+#prevNav, #nextNav {
+    float: left;
+    height: 26px;
+}
+
+    #nextNav .ui-icon, #prevNav .ui-icon {
+        margin-top: 2px;
+    }
+
+    #nextNav .ui-button-text, #prevNav .ui-button-text {
+        padding-top: 3px;
+    }
+
+#nextNav {
+    margin-right: 0px;
+}
+
+.plannerInfo
+{
+/*    float: right;*/
+    width: 685px;
+}
+.planItem
+{
+    clear: left;
+    float: left;
+    margin-right: 80px;
+ /*   margin-top: 25px;*/
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+.planItem-alternate {
+    clear: none;
+    float: right;
+}
+
+.planItem .item1
+{
+    float: left;
+    width: 150px;
+    color: #002D52;
+}
+.plannerDetail
+{
+    margin-bottom: 20px;
+    text-align: justify;
+    /*min-height: 80px;*/
+    /*color: #002D52;*/
+    color: red;
+}
+.planItemHeader
+{
+    color: #999999;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.planItemBody
+{
+    margin-bottom: 5px;
+    padding-left: 20px;
+}
+.loading
+{
+    background-image: url(./PT_images/loading.gif);
+    background-position:center;
+    background-repeat:no-repeat;
+    height: 320px;
+}
+.clear
+{
+    clear: both;
+}
+.prevButton
+{
+    background: url("./PT_images/leftarrow.png") no-repeat scroll 0 1px transparent;
+    height: 40px;
+    width: 50px;
+    display: block;
+    float: left;
+}
+.nextButton
+{
+    background: url("./PT_images/rightarrow.png") no-repeat scroll 0 1px transparent;
+    height: 40px;
+    width: 50px;
+    display: block;
+    float: right;
+}
+.prevButton:hover, .nextButton:hover
+{
+    background-position: 0 -43px;
+}
+.nextCustomButton
+{
+    background: url("./PT_images/next_button.png") no-repeat scroll 0 1px transparent;
+    border: medium none;
+    float: right;
+    height: 68px;
+    width: 172px;
+}
+.nextCustomButton:hover
+{
+    background: url("./PT_images/next_button.png") no-repeat scroll 0 -76px transparent;
+}
+.doneCustomButton
+{
+    background: url("./PT_images/done_button.jpg") no-repeat scroll 0 1px transparent;
+    border: medium none;
+    float: right;
+    height: 68px;
+    width: 172px;
+}
+.doneCustomButton:hover
+{
+    background: url("./PT_images/done_button.jpg") no-repeat scroll 0 -86px transparent;
+}
+.sliderItem .itemHeader
+{
+    margin: 10px 0;
+}
+.sliderItem .itemBody
+{
+/*    padding: 10px;*/
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+.sliderItem .itemHeader span
+{
+    color: #004276;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.selectorContainer input[type="image"]:hover, .selectorContainer input[type="image"].active
+{
+    /* IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; /* IE 5-7 */
+    filter: alpha(opacity=50); /* Netscape */
+    -moz-opacity: 0.5; /* Safari 1.x */
+    -khtml-opacity: 0.5; /* Good browsers */
+    opacity: 0.5;
+}
+.handleText
+{
+    color: #004276;
+    font-size: 20px;
+    margin-top: -22px;
+    position: absolute;
+    width: 215px;
+}
+a.ui-slider-handle:focus
+{
+    outline: 0;
+}
+.selectorContainer select
+{
+    float: right;
+    width: 110px;
+    height: 23px;
+    padding-top: 2px;
+}
+.itemHeader input[type=button]
+{
+    margin-left:20px;
+    width:100px;
+}
+.sliderItem .itemHeader span.switchto
+{
+    font-size: 11px;
+    letter-spacing: inherit;
+    margin: -14px 35px;
+    position: absolute;
+}
+
+#planSelector span.switchto {
+    margin-left: 20px;
+
+}
+/* Slides layout */
+
+.item1 input[type="image"]
+{
+/*    width: 49%;*/
+}
+.item2 input[type="image"]
+{
+    margin: 4px 2px;
+/*    width: 32%;*/
+}
+.item3 input[type="image"]
+{
+    margin: 4px 2px;
+    /*width: 32%;*/
+}
+.item4 input[type="image"]
+{
+    margin: 4px 2px;
+    /*width: 48%;*/
+}
+
+.item4.fit-plan-program input[type="image"] {
+    width: auto;
+}
+
+.item6 input[type="image"]
+{
+    /*width: 49%;*/
+}
+/*
+.item7 .ui-slider-horizontal
+{
+    background: url("./PT_images/blueSlider.JPG") no-repeat scroll 0 0 transparent;
+    border: medium none;
+    height: 75px;
+    margin-top: 40px;
+}
+.item7 .ui-slider-horizontal .ui-slider-handle
+{
+    background: url("./PT_images/customHandle.png") no-repeat scroll 0 0 transparent !important;
+    border: medium none;
+    color: #004276;
+    font-size: 1.5em;
+    font-weight: 100;
+    height: 75%;
+    width: 15px;
+}
+    */
+.item7 .ui-button.ui-state-active
+{
+    background: none repeat scroll 0 0 #EFF8FF;
+    border: 1px solid #71BFFF;
+    color: #004276;
+    font-weight: bold;
+}
+.item7 .ui-button
+{
+    font-size: 25px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+#heightButton, #weightButton {
+    padding: 2px 10px 3px 14px;
+    margin-top: -10px;
+    height: 23px;
+}
+
+#customNextButton {
+    float: right;
+    margin-right: 0px;
+}
+
+#weekDays span {
+    text-align: center;
+}
+
+#doneButton {
+    float: right;
+}
+
+#planFinalTitle {
+    margin-bottom: 10px;
+}
+
+.selection-box
+{
+	margin: 0px;
+	margin-top: -6px;
+	list-style-type: none;
+	border-bottom: 1px solid #a6a4a4;
+	
+	filter:progid:DXImageTransform.Microsoft.gradient(startcolorstr=white,endcolorstr=#d9d9d9,gradientType=0);
+    	-ms-filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=white,endcolorstr=#d9d9d9,gradientType=0);/*for IE8*/	
+    	background: #ececec;
+    	background:-moz-linear-gradient(top, white, #d9d9d9);  
+    	background:-webkit-gradient(linear, 0 0, 0 bottom, from(#ffffff), to(#d9d9d9));  
+    	background:-o-linear-gradient(top, white, #d9d9d9); 
+}
+
+#timeSlider {
+    margin-top: 30px;
+}
+
+.fit_saveplan_ajax {
+    float: right;
+    width: 32px;
+    height: 32px;
+    background-image: url('images/progress.gif');
+    margin-right: 5px;
+}
+
+
+/* End of Slides layout */
+
+.fit-plan-schedule input[type="image"], .fit-plan-equipment input[type="image"], .fit-plan-habits input[type="image"], .fit-plan-gender input[type="image"] {
+    width: 165px;
+}
+
+#weightSlider, #heightSlider, #ageSlider, #timeSlider, #intensitySlider, #experienceSlider, #weekSlider {
+    width: 698px;
+}
+
+.fit-ui .ui-slider-wrapper.horizontal {
+    height: 2.6em;
+}
+
+#traingPlannerMain .plannerProgress .ui-button-icon-primary .ui-icon {
+    top: 10%;
+}
+
+#nextNav .ui-icon, #prevNav .ui-icon {
+    top: 10%;
+}
+
+/* customised slider plug-in */
+.ui-slider-alignlabel .horizontal .ui-slider-label-first span {
+    margin-left: 0px;
+}
+
+.ui-slider-alignlabel .horizontal .ui-slider-label-last span {
+    margin-left: 0px;
+    position: absolute;
+    right: 14px;
+}
+
+.program-dynamic {
+    display: block;
+}
+
+.program-fixed {
+    display: none;
+}
+
+/* Fitness My Plans List */
+#fitMyPlanList {
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.fitLoader {
+    background-image: url("images/progress.gif");
+    height: 32px;
+    margin-right: 5px;
+    width: 32px;
+}
+
+/* functions not available to all clients */
+.custom-only { display: none; }

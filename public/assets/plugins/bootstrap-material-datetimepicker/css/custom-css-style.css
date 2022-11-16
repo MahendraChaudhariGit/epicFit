@@ -1,0 +1,74 @@
+.dtp {
+	z-index:100000;
+}
+.dtp > .dtp-content {
+	background: #fafafa !important;
+}
+.dtp > .dtp-content > .dtp-date-view > header.dtp-header {
+	display: none !important;
+}
+.dtp div.dtp-date, 
+.dtp div.dtp-time {
+	background: #253746  !important;
+}
+.dtp .dtp-actual-meridien a.selected {
+	background: #253746 !important;
+}
+.dtp-meridien-am.selected, .dtp-meridien-pm.selected{
+	color:#fff !important;
+}
+.dtp .btn:not(.btn-raised), 
+.dtp .btn:not(.btn-raised).btn-default, 
+.dtp .input-group-btn .btn:not(.btn-raised), 
+.dtp .input-group-btn .btn:not(.btn-raised).btn-default {
+	color: #253746 !important;
+}
+.dtp .year-picker-item.active{
+	color:#253746 !important;
+}
+.dtp table.dtp-picker-days tr > th {
+	color: #253746 !important;
+}
+
+.dtp table.dtp-picker-days tr > td > a, .dtp .dtp-picker-time > a {
+	color: #253746 !important;
+}
+
+.dtp div.dtp-picker-month,
+.dtp div.dtp-actual-time {
+	color: #253746 !important;
+}
+
+.dtp table.dtp-picker-days tr > td > a.selected {
+	background: #253746 !important;
+	color:#fff !important;
+}
+
+.dtp table.dtp-picker-days tr > td > a:hover {
+	background: #253746 !important;
+	color:#fff !important;
+}
+
+.dtp .p10 > a {
+	color:#fff !important;
+}
+
+.dtp .btn.btn-flat {
+	background: transparent !important;
+}
+
+.dtp .btn.btn-flat:hover {
+	opacity: 0.5 !important;
+}
+.dtp .dtp-picker-year {
+	background: #f7f7f7;
+}
+.dtp a, .dtp .ind-val{
+	color: rgba(255, 255, 255, 0.7); 
+}
+.active-time{
+	color: #fff !important;
+}
+/*.dtp .hour-val, .dtp .minute-val, .dtp .ind-val{
+	color:#fff !important;
+}*/
